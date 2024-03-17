@@ -35,11 +35,11 @@ func helloWorld() {
 	customerName = "Damon Cole"
 
 	// 출력
-	fmt.Print(hello)
-	fmt.Print(hello2)	
-	fmt.Print(quantity)
-	fmt.Print(length, width)
-	fmt.Print(customerName)
+	fmt.Println(hello)
+	fmt.Println(hello2)	
+	fmt.Println(quantity)
+	fmt.Println(length, width)
+	fmt.Println(customerName)
 
 }
 
@@ -53,9 +53,9 @@ func zeroValue() {
 	var length, width float64
 	var customerName string
 
-	fmt.Print(quantity)
-	fmt.Print(length, width)
-	fmt.Print(customerName)
+	fmt.Println(quantity)
+	fmt.Println(length, width)
+	fmt.Println(customerName)
 }
 
 func shortHand() {
@@ -69,9 +69,9 @@ func shortHand() {
 	length, width := 1.2, 2.4
 	customerName := "Damon Cole"
 
-	fmt.Print(quantity)
-	fmt.Print(length, width)
-	fmt.Print(customerName)
+	fmt.Println(quantity)
+	fmt.Println(length, width)
+	fmt.Println(customerName)
 
 }
 
@@ -98,7 +98,7 @@ func helloConst () {
 		a11
 	)
 
-	fmt.Print(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11)
+	fmt.Println(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11)
 }
 
 func Variable() {

@@ -73,6 +73,33 @@ func shortHand() {
 	fmt.Print(customerName)
 
 }
+
+func helloConst () {
+	const a int = 1
+	const b, d = 10, 20
+	const c = "hello const"
+
+	fmt.Print(a)
+	fmt.Print(b, d)
+	fmt.Print(c)
+
+	const (
+		a1 = 1
+		a2
+		a3
+		a4
+		a5 = 50
+		a6
+		a7
+		a8
+		a9 = "my const value"
+		a10
+		a11
+	)
+
+	fmt.Print(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11)
+}
+
 func main() {
 
 	helloWorld()

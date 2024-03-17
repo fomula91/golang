@@ -1,4 +1,5 @@
-package main // main 패키지로 선언
+package study
+
 import "fmt" // fmt 패키지를 가져옴
 
 // golang에서는 fmt를 사용하지 않고도 Print, Println 등을 사용할 수 있음
@@ -100,9 +101,10 @@ func helloConst () {
 	fmt.Print(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11)
 }
 
-func main() {
+func Variable() {
 
 	helloWorld()
 	zeroValue()
 	shortHand()
+	helloConst()
 }

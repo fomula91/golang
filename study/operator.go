@@ -5,6 +5,8 @@ import "fmt"
 func Operator() {
 	operator()
 	boolOperator()
+	chanelOperator()
+	pointerOperator()
 }
 
 func operator() {
@@ -75,3 +77,45 @@ func boolOperator() {
 	fmt.Println("!1 ", !true)
 	fmt.Println("!0 ", !false)
 }
+
+func chanelOperator() {
+	ch := make(chan int)
+
+	go func ()  {
+		ch <- 10
+	}()
+
+	result := <- ch
+	fmt.Println(result)
+}
+
+func pointerOperator() {
+	var num int = 2
+	var pnum = &num
+
+	fmt.Println("num : ", num)   //num 값
+	fmt.Println("pnum :", pnum)  //num의 메모리 주소
+	fmt.Println("pnum :", *pnum) //num의 주소로 메모리에 할당돼있는 값 접근
+
+	*pnum++
+	fmt.Println("num : ", num)
+	fmt.Println("pnum :", *pnum)
+	//포인터 연산자를 이용한 값 변경
+}
+
+// 연산자 우선순위
+// 1. (), [], ->, ++, -- ::: 결합방향 ->
+// 2. +, -, !, ~, (type), *, &, sizeof ::: 결합방향 <-
+// 3. *,/,% ::: 곱셈, 나눗셈 관련 연산	결합방향 →
+// 4 +,- ::: 덧셈, 뺄셈 결합방향 →
+// 5 <<, >> ::: 비트 이동 결합방향 →
+// 6 <, <=, >, => ::: 대소 비교  결합방향 →
+// 7 ==, != ::: 동등 비교 결합방향 →
+// 8 & ::: 비트 AND 결합방향 →
+// 9 ^ ::: 비트 XOR 결합방향 →
+// 10 | ::: 비트 OR 결합방향 →
+// 11 && ::: 논리 AND 결합방향 →
+// 12 || ::: 논리 OR 결합방향 →
+// 13 ? : ::: 조건 연산 결합방향 ←
+// 14 =, +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |= ::: 대입 연산 결합방향 ←
+// 15 , ::: 콤마 연산 결합방향 →
